@@ -9,6 +9,11 @@
     -webkit-background-size: cover;
     background-size:cover;
 }
+.item-3 {
+    background: url("../images/bg3.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size:cover;
+}
 .item-5 {
     background: url("../images/bg1.jpg") no-repeat center center;
     -webkit-background-size: cover;
