@@ -122,7 +122,7 @@ Table of Contents
 /* HARDCOVER FRONT */
  
 .paperback_front {
-    background-color: #000;
+    background-color: #6495ed;
 }
  
 .paperback_front::after{
