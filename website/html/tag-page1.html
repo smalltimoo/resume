@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Me by blogabs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+		
+		<style>
+				.box{position: absolute;
+						top:50%;left: 40%;
+						background: #159957;
+						opacity: .7;
+				    width:50%;  margin:auto; padding:28px;
+				    height:350px; border:1px #111 solid;
+				    display:none;            /* 默认对话框隐藏 */
+				}
+				.box.show{display:block;} 
+				.box .x{ font-size:18px; text-align:right; display:block;}
+				.box input{width:80%; font-size:18px; margin-top:18px;}
+				#btncli{
+					margin: 27px auto;
+					margin-left: 45%;
+				}
+		</style>
+	</head>
+
+	<body>
+		<section class="page-header">
+			<h1 class="project-name">Me</h1>
+			<h2 class="project-tagline">My Front End Collection</h2>
+			<h3 class=>综合类</h3>
+		</section>
+
+		<section class="main-content">
+			<h3>
+<a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>综合</h3>
+			<div class="page-header" id="page-header">
+				<button class="btn" id="btn" rel="nofollow" onclick="msgbox(1)">+</button>
+				<a href="http://www.github.com" class="btn" target="_blank" rel="nofollow">Github</a>
+			</div>
+			 <div id='inputbox' class="box">
+        <a class='x' href=''; onclick="msgbox(0); return false;">X</a>
+        URL:<input type="text" id="url"><br />
+        VAL:<input type="text" id="value">
+        <button id="btncli" onclick="add()">确定</button>
+     </div>
+		</section>
+	</body>
+	<script type="text/javascript">
+		 function msgbox(n){
+            document.getElementById('inputbox').style.display=n?'block':'none';     /* 点击按钮打开/关闭 对话框 */
+       }
+		 function add(){
+		 	var a = document.createElement("a")
+		 	a.href = document.getElementById("url").value
+		 	a.innerHTML = document.getElementById("value").value;
+		 	a.className = 'btn';
+		 	a.rel = 'nofollow';
+		 	a.target = '_blank';
+		 	if(document.getElementById("url").value && document.getElementById("value").value !=null){
+						document.getElementById("page-header").appendChild(a)
+		 	}else{
+		 		alert("输入框要有内容")
+		 		return false;
+		 	}
+		 	document.getElementById("url").value = ''
+		  document.getElementById("value").value =''
+		  msgbox(0)
+		 }
+	</script>
+</html>
