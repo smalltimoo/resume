@@ -1,0 +1,45 @@
+
+$tableWidth: 20px 28% 8% 13% 13% 320px;
+
+@mixin defaultButton($bgColor1:transparent,$bgColor2:$baseColor1) {
+  background-color: $bgColor1;
+  color: $bgColor2;
+  text-align: center;
+  transition: 0.5s all;
+  border: none;
+  outline: none;
+  &:hover {
+
+  }
+}
+
+@mixin defaultInput($width:16px,$height:16px) {
+  color: $baseColor1;
+  width: $width;
+  height: $height;
+  background-color: transparent;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+}
+
+@mixin rightSide(){
+  font-family: $fontSourceSansPro;
+  color: $baseColor1;
+  position: absolute;
+  left: 200px;
+  top: $headerHeight;
+  bottom: 0;
+  width: calc(100% - 200px);
+  overflow-y: auto;
+}
+
+@mixin shade(){
+  position:absolute;
+  top:0;
+  right: 0;
+  left:0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index:9;
+}
